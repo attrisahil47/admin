@@ -32,7 +32,7 @@ const Feedback = () => {
 
   const fetchFeedbacks = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/auth/getFeedbacks");
+      const response = await axios.get("https://server-7alf.onrender.com/api/auth/getFeedbacks");
       const feedbackData = response.data.map((item, index) => ({
         ...item,
         key: item._id || index,

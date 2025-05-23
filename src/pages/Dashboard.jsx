@@ -79,7 +79,7 @@
 //   useEffect(() => {
 //     const fetchPatients = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:5000/api/auth/getUser");
+//         const response = await axios.get("https://server-7alf.onrender.com/api/auth/getUser");
 //         setTotalPatients(response.data.length);
 //       } catch (error) {
 //         console.error("Error fetching patients:", error);
@@ -88,7 +88,7 @@
 
 //     const fetchDoctors = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:5000/api/auth/getDoctors");
+//         const response = await axios.get("https://server-7alf.onrender.com/api/auth/getDoctors");
 //         setTotalDoctors(response.data.length);
 //       } catch (error) {
 //         console.error("Error fetching doctors:", error);
@@ -254,7 +254,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/auth/getUser");
+        const response = await axios.get("https://server-7alf.onrender.com/api/auth/getUser");
         setTotalPatients(response.data.length);
       } catch (error) {
         console.error("Error fetching patients:", error);
@@ -263,7 +263,7 @@ const Dashboard = () => {
 
     const fetchDoctors = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/auth/getDoctors");
+        const response = await axios.get("https://server-7alf.onrender.com/api/auth/getDoctors");
         setTotalDoctors(response.data.length);
       } catch (error) {
         console.error("Error fetching doctors:", error);
@@ -272,7 +272,7 @@ const Dashboard = () => {
 
     const fetchBookings = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/auth/getBookings");
+        const response = await axios.get("https://server-7alf.onrender.com/api/auth/getBookings");
 
         // Filter today's bookings
         const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD

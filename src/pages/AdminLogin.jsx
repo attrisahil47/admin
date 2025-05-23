@@ -21,7 +21,7 @@ const AdminLogin = () => {
   const onFinish = async (values) => {
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", {
+      const response = await axios.post("https://server-7alf.onrender.com/api/auth/login", {
         emailAddress: values.email,
         password: values.password,
       });

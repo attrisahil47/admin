@@ -123,7 +123,7 @@ const Doctors = () => {
       render: (photo) =>
         photo ? (
           <img
-            src={`http://localhost:5000/uploads/${photo}`}
+            src={`https://server-7alf.onrender.com/uploads/${photo}`}
             alt="Doctor"
             width={60}
             height={60}

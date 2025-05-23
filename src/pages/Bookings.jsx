@@ -10,7 +10,7 @@ const Bookings = () => {
   // Fetch bookings from backend
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/auth/getBookings");
+      const res = await axios.get("https://server-7alf.onrender.com/api/auth/getBookings");
       const dataWithKey = res.data.map((item, index) => ({
         ...item,
         key: item._id || index,
@@ -26,7 +26,7 @@ const Bookings = () => {
   const handleAccept = async (record) => {
     console.log("Hello")
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/confirmBooking", {
+      const res = await axios.post("https://server-7alf.onrender.com/api/auth/confirmBooking", {
         fullName: record.fullName,
       emailAddress: record.emailAddress,
       bookingDate: record.bookingDate,

@@ -32,7 +32,7 @@ const Contact = () => {
 
   const fetchContacts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/auth/getContacts");
+      const response = await axios.get("https://server-7alf.onrender.com/api/auth/getContacts");
       const contactsWithKeys = response.data.map((item, index) => ({
         ...item,
         key: item._id || index,

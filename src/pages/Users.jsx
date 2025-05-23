@@ -27,7 +27,7 @@ const Users = () => {
   // Fetch all users
   const viewUsers = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/auth/getUser`);
+      const response = await axios.get(`https://server-7alf.onrender.com/api/auth/getUser`);
       setUsers(response.data);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -43,7 +43,7 @@ const Users = () => {
   const onFinish = async (values) => {
     if (editingUser) {
       try {
-        const response = await axios.put(`http://localhost:5000/api/auth/updateUser/${editingUser._id}`, values);
+        const response = await axios.put(`https://server-7alf.onrender.com/api/auth/updateUser/${editingUser._id}`, values);
         toast.success("User updated successfully!");
         handleCancel();
         viewUsers();
@@ -53,7 +53,7 @@ const Users = () => {
       }
     } else {
       try {
-        await axios.post(`http://localhost:5000/api/auth/addUsers`, values);
+        await axios.post(`https://server-7alf.onrender.com/api/auth/addUsers`, values);
         toast.success("User added successfully!");
         handleCancel();
         viewUsers();
@@ -78,7 +78,7 @@ const Users = () => {
   // Delete user by ID
   const deleteUser = async (id, name) => {
     try {
-      await axios.delete(`http://localhost:5000/api/auth/deleteUser/${id}`);
+      await axios.delete(`https://server-7alf.onrender.com/api/auth/deleteUser/${id}`);
       setUsers(users.filter(user => user._id !== id));
       toast.success('User deleted successfully!');
     } catch (error) {
